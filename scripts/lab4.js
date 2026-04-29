@@ -39,7 +39,7 @@ function discountPrices(prices, discount) {
         return false;
     }
 
-    if ((prices instanceof Array) || (typeof discount !== 'number') ){
+    if ((prices instanceof Array) == false || (typeof discount !== 'number') ){
         return false;
     }
 
@@ -48,7 +48,7 @@ function discountPrices(prices, discount) {
     }
 
     for(let i = 0; i < length; i++) {
-        discountedPrice += prices[i] * (1 - discount);
+        discountedPrice = prices[i] * (1 - discount);
         discounted.push(discountedPrice);
     }
 
